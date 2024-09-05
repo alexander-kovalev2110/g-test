@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Box from '@mui/material/Box';
 
-function App() {
+import InputGroup from './components/InputGroup';
+
+const App = () => {
+  const [inputName, setInputName] = useState('');
+  const [inputMail, setInputMail] = useState('');
+
+  const handleNameChange = (event) => {
+      setInputName(event.target.value);
+  };
+
+  const handleMailChange = (event) => {
+    setInputMail(event.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      display="flex"
+      flexDirection="column"
+      gap={3} sx={{ p: 2, maxWidth: 500, margin: 'auto' }}
+    >
+      <InputGroup 
+        id="name-id"
+        label="Name"
+        prompt="Full name"
+        value={inputName}
+        onChange={handleNameChange}
+        helper="Please enter your full name."
+      >
+      </InputGroup>
+
+      <InputGroup 
+        id="mail-id"
+        label="e-mail"
+        prompt="Your e-mail"
+        value={inputMail}
+        onChange={handleMailChange}
+        helper="Please enter your e-mail."
+      >        
+      </InputGroup>
+    </Box>
   );
-}
+};
 
 export default App;
