@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-// import AccountBoxIcon from '@mui/icons-material/AccountBox';
-// import EmailIcon from '@mui/icons-material/Email';
 import { AccountCircle, Email } from '@mui/icons-material';
 
 import InputGroup from './components/InputGroup';

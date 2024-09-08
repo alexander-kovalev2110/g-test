@@ -15,14 +15,14 @@ ForName.args = {
   prompt: 'Full name',
   value: '',
   onChange: () => {},
-  icon: Email
+  icon: AccountCircle
 };
 
 export const ForMail = Template.bind({});
 ForMail.args = {
   id: 'name-id',
   prompt: 'Full name',
-  value: 'Real name text',
+  value: 'Real email text',
   onChange: () => {},
-  icon: AccountCircle
+  icon: Email
 };
