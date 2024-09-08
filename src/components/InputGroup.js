@@ -5,7 +5,7 @@ import InputText from './InputText';
 import MyInputLabel from './MyInputLabel';
 import InputAnnotation from './InputAnnotation';
 
-const InputGroup = ({ id, label, prompt, value, onChange, helper }) => {
+const InputGroup = ({ id, label, prompt, value, onChange, helper, icon }) => {
     return (
         <Box
             display="flex"
@@ -18,6 +18,7 @@ const InputGroup = ({ id, label, prompt, value, onChange, helper }) => {
                 prompt={prompt}
                 value={value}
                 onChange={onChange}
+                icon={icon}
             />
             <InputAnnotation helper={helper}></InputAnnotation>
         </Box>

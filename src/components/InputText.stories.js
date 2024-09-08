@@ -1,5 +1,6 @@
 import React from 'react';
 import InputText from './InputText';
+import { AccountCircle, Email } from '@mui/icons-material'
 
 export default {
   title: 'Components/InputText',
@@ -8,26 +9,20 @@ export default {
 
 const Template = (args) => <InputText {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const ForName = Template.bind({});
+ForName.args = {
   id: 'default-id',
   prompt: 'Full name',
   value: '',
   onChange: () => {},
+  icon: Email
 };
 
-export const Filled = Template.bind({});
-Filled.args = {
+export const ForMail = Template.bind({});
+ForMail.args = {
   id: 'name-id',
   prompt: 'Full name',
   value: 'Real name text',
   onChange: () => {},
+  icon: AccountCircle
 };
-
-// export const WithLongText = Template.bind({});
-// WithLongText.args = {
-//   id: 'long-text-input',
-//   prompt: 'Prompt with Long Text',
-//   value: 'This input field has a lot of text to show how it handles large input values.',
-//   onChange: () => {},
-// };

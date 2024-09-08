@@ -1,5 +1,6 @@
 import React from 'react';
 import InputGroup from './InputGroup';
+import { AccountCircle, Email } from '@mui/icons-material'
 
 export default {
   title: 'Components/InputGroup',
@@ -16,6 +17,7 @@ ForName.args = {
   value: 'Alex Smith',
   onChange: () => {},
   helper: 'Please enter your full name.',
+  icon: AccountCircle
 };
 
 export const ForMail = Template.bind({});
@@ -26,4 +28,5 @@ ForMail.args = {
   value: 'example@example.com',
   onChange: () => {},
   helper: 'Please enter your e-mail.',
+  icon: Email
 };
